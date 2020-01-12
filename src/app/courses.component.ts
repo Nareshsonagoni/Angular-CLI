@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
 @Component({
     selector: 'courses',
     template: `
-    <input (keyup.enter)= "keyUp($event)"/>
+    <input #email (keyup.enter)= "keyUp(email.value)"/>
 
         <button (click)= "onSave($event)">Save</button>
         `
@@ -13,8 +13,8 @@ export class CoursesComponent {
     title = 'List of Courses';
     courses;
 
-    keyUp($event) {
-        console.log($event.target.value);
+    keyUp(email) {
+        console.log(email);
     }
 
     onSave($event) {
