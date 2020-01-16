@@ -15,10 +15,12 @@ import { Component } from '@angular/core';
 
 
     <br/>
-    <input [(ngModel)]='email' (keyup.enter)= "keyUp()"/>
-
-        <button (click)= "onSave($event)">Save</button>
-        `
+    <input [(ngModel)]='title' type='text'>
+    <br/>
+    {{ title | titleCase }}<br/>
+    `
+    // <input [(ngModel)]='email' (keyup.enter)= "keyUp()"/>
+    // <button (click)= "onSave($event)">Save</button>
 })
 export class CoursesComponent {
     // title = 'List of Courses';
@@ -30,6 +32,7 @@ export class CoursesComponent {
         price: 190.95,
         releaseDate: new Date()
     };
+    title: string;
     courses;
     email = 'me@email.com';
 
