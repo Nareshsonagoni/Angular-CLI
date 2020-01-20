@@ -5,15 +5,7 @@ import { Component, ViewEncapsulation } from '@angular/core';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  encapsulation: ViewEncapsulation.Native
 })
 export class AppComponent {
-  title = 'naresh-world';
-  post = {
-    title: "Title",
-    isFavorite: true,
-  }
-  onFavoriteChange(eventArgs: FavoriteChangedEventArgs) {
-    console.log("Favorite Changed:", eventArgs);
-  }
+  courses = [1, 2, 4];
 }

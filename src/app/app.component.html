@@ -3,12 +3,10 @@
 <!-- <courses></courses> -->
 <!-- <favorite [isFavorite]="post.isFavorite" (change)="onFavoriteChange($event)"></favorite> -->
 
-<bootstrap-panel>
-    <div class="heading">Heading</div>
-    <div class="body">
-        <h2>Body</h2>
-        <P>
-            Some content ...
-        </P>
-    </div>
-</bootstrap-panel>
+<div *ngIf="courses.length > 0; then coursesList else noCourses"></div>
+<ng-template #coursesList>
+    Below is the courses list
+</ng-template>
+<ng-template #noCourses>
+    No courses in list
+</ng-template>
